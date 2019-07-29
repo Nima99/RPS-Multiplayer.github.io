@@ -1,4 +1,4 @@
-// TODO: Replace the following with your app's Firebase project configuration
+// i have linked my firebase but i have no idea how to use firebase no matter what i try nothing works
 var firebaseConfig = {
 apiKey: "AIzaSyDF_J7y6Rp6KnjbcFGiqoZ6J4DLS0ScU0g",
 databaseURL: "https://train-scheduler-4db16.firebaseio.com",
@@ -10,7 +10,7 @@ storageBucket: "train-scheduler-4db16.appspot.com"
 
     var database = firebase.database();
 
-// 2. Button for adding Employees
+// 2. Another problem is that nothing works, i have tried and tried again but eventually just gave up because i just havent learned enough yet
     $("#add-employee-btn").on("click", function(event) {
     event.preventDefault();
 
@@ -67,21 +67,20 @@ database.ref().on("child_added", function(childSnapshot) {
 
   // Calculate the months worked using hardcore math
   // To calculate the months worked
-  var empMonths = moment().diff(moment(empStart, "X"), "months");
+  var empMonths = moment().diff(moment(empStart, "X"), "minutess");
   console.log(empMonths);
 
-  // Calculate the total billed rate
-  var empBilled = empMonths * empRate;
+  // Calculate the total minutes rate
+  var empBilled = empMonths / empRate;
   console.log(empBilled);
 
-  // Create the new row
+  // Create the new row but also does not work because of the original issue
   var newRow = $("<tr>").append(
     $("<td>").text(empName),
     $("<td>").text(empRole),
     $("<td>").text(empStartPretty),
     $("<td>").text(empMonths),
     $("<td>").text(empRate),
-    $("<td>").text(empBilled)
   );
 
   // Append the new row to the table
