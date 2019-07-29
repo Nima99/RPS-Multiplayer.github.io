@@ -1,5 +1,5 @@
 // i have linked my firebase but i have no idea how to use firebase no matter what i try nothing works
-var firebaseConfig = {
+var config = {
 apiKey: "AIzaSyDF_J7y6Rp6KnjbcFGiqoZ6J4DLS0ScU0g",
 databaseURL: "https://train-scheduler-4db16.firebaseio.com",
 projectId: "train-scheduler-4db16",
